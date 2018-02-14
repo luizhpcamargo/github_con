@@ -26,7 +26,7 @@ RSpec.describe GithubService do
       it 'returns a json with error message' do
         stub_request(:get, /api.github.com/).with(headers: header).to_return(status: 400, body: error_res, headers: {})
         response = GithubService.call
-        expect(response).to eq({ code: "400", message: "error"})
+        expect(response).to eq({error: { code: "400", message: "error"}})
       end
     end
   end

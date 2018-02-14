@@ -29,7 +29,7 @@ class GithubService
 
   def handle_response(res)
     json_res = JSON.parse(res.body)
-    res.is_a?(Net::HTTPSuccess) ? json_res : {code: res.code, message: json_res.dig('errors')[0].dig('message')}
+    res.is_a?(Net::HTTPSuccess) ? json_res : {error: {code: res.code, message: json_res.dig('errors')[0].dig('message')}}
   end
 
 end

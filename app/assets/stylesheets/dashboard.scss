@@ -1,3 +1,13 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ruby {background-color:#701516 !important; border: none !important; }
+.python {background-color:#3572A5 !important; border: none !important; }
+.swift {background-color:#FFAC45 !important; border: none !important; }
+.elixir {background-color:#6E4A7E !important; border: none !important; }
+.lua {background-color:#000080 !important; border: none !important; }
+
+.hiddenRow {
+    padding: 0 !important;
+}

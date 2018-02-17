@@ -17,15 +17,15 @@ RSpec.describe GithubService do
     context 'with success' do
       it 'returns a json with data' do
         stub_request(:get, /api.github.com/).with(headers: header).to_return(status: 200, body: success_res, headers: {})
-        response = GithubService.call
-        expect(response).to eq(JSON.parse(success_res))
+        response = GithubService.new('ruby').call
+        expect(response).to eq(JSON.parse(success_res)['items'])
       end
     end
 
     context 'with error' do
       it 'returns a json with error message' do
         stub_request(:get, /api.github.com/).with(headers: header).to_return(status: 400, body: error_res, headers: {})
-        response = GithubService.call
+        response = GithubService.new('ruby').call
         expect(response).to eq({error: { code: "400", message: "error"}})
       end
     end

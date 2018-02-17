@@ -1,0 +1,50 @@
+<br>
+<div class="row">
+  <div class="col-md-9 col-sm-9">
+    <h2 class="text-center"> 
+      <a href="<%= repo.html_url %>" target="_blank"><%= repo.name.capitalize %></a>
+    </h2>
+
+    <p class="text-center"><%= repo.description %></p>
+    <p class="text-center"><strong>Creation Date:</strong> <%= repo.creation_date&.strftime("%D - %T") %> </p>
+    <p class="text-center"><strong>Last Update:</strong> <%= repo.update_date&.strftime("%D - %T") %> </p>
+
+    <div class="row">
+      <div class="col-md-4 col-sm-4 text-center">
+        <h4><strong><%= repo.stargazers_count %></strong></h4>                    
+        <p>Stars</p>
+      </div>
+
+      <div class="col-md-4 col-sm-4 text-center">
+        <h4><strong><%= repo.watchers_count %></strong></h4>                    
+        <p>Wachers</p>
+      </div>
+
+      <div class="col-md-4 col-sm-4 text-center">
+        <h4><strong><%= repo.forks_count %></strong></h4>                    
+        <p>Forks</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-3 text-center">
+    <img class="btn-sm" height="200" width="200" src="<%= repo.owner.avatar_url %>" alt="" style="border-radius:50%;">
+    <h2 class="text-center"> 
+      <a href="<%= repo.owner.html_url %>" target="_blank">
+      <span class="glyphicon glyphicon-user"></span>
+        <%= repo.owner.login.capitalize %>
+      </a>
+    </h2>
+  </div>
+</div>
+
+<!-- 
+t.string   :name
+t.string   :language
+t.integer  :stargazers_count
+t.integer  :watchers_count
+t.integer  :forks_count
+t.text     :html_url
+t.text     :description 
+t.datetime :creation_date
+t.datetime :update_date -->

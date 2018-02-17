@@ -3,11 +3,12 @@ require 'net/http'
 class GithubService
 
   SORT = 'stars'.freeze
-  ORDER = 'asc'.freeze
+  ORDER = 'desc'.freeze
   RESULTS = '5'.freeze
+  LANGUAGES = %w(ruby lua elixir python swift).freeze
 
   def self.call
-    new.call
+    LANGUAGES.each { |l| new(l).call }
   end
 
   def call
@@ -24,7 +25,9 @@ class GithubService
 
   def api_response
     response = Net::HTTP.get_response(@uri)
-    handle_response(response)
+    formatted_response = handle_response(response)
+    return formatted_response if formatted_response[:error]
+    Handlers::RepositoryHandler.handle_api_data(formatted_response)
   end
 
   def handle_response(res)

@@ -11,7 +11,8 @@ gem 'haml-rails', '~> 1.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'therubyracer', platforms: :ruby

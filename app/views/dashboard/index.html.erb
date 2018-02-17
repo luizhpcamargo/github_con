@@ -4,8 +4,8 @@
     <br>
     <h2>Github Trending Repositories</h2>
     <%= button_to "Fetch data", { action: "fetch_data" }, { class: 'btn btn-primary btn-lg float-right' } %>
-    <h6>Hit the "Fetch Data" button to retrieve data and create/update the repositories.</h6>
-    <h6><p class="font-italic">(There is a bug with github api, where it's returning the number of stars to the watchers)</p></h6>
+    <h6>Hit the "Fetch Data" button to retrieve data and create/update the repositories. Click at row to see details of the repository.</h6>
+    <h6><p class="font-italic">OBS: (There is a bug with github api, where it's returning the number of stars to the watchers)</p></h6>
     <br>
   </div>
   <% if @repos.present? %>

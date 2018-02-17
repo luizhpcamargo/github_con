@@ -26,7 +26,7 @@ RSpec.describe DashboardController, type: :controller do
     end
   end
 
-  context 'GET #fetch_data' do
+  context 'POST #fetch_data' do
     it 'calls github service' do
       expect(GithubService).to receive(:call)
       get :fetch_data

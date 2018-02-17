@@ -1,24 +1,58 @@
-# README
+# Github Con 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project connects with github api(v3) and find the 5 top trending repositories given 5 languages.
 
-Things you may want to cover:
+### Prerequisites
 
-* Ruby version
+Ruby 2.5.0
+Rails 5.1.4
+PostgreSQL
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Clone project
+```
+git clone git@github.com:Tarcisiosk/github_con.git
+```
 
-* Database creation
+Run bundle
 
-* Database initialization
+```
+bundle install
+```
 
-* How to run the test suite
+Create database
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rake db:create
+```
 
-* Deployment instructions
+Run migrations
 
-* ...
+```
+rake db:migrate
+```
+
+Run server
+
+```
+rails s
+```
+
+You should be able to see the app running at `localhost:3000`
+
+### Running the tests
+
+The tests secure the app main functionalities and the github api data handling.
+
+To run the tests use the command bellow:
+
+```
+rspec spec
+```
+
+You may need to:
+
+```
+rake db:test:prepare
+```

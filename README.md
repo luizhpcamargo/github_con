@@ -58,5 +58,4 @@ rake db:test:prepare
 ```
 
 ### WEBAPP
-
-https://secret-chamber-93348.herokuapp.com/
+http://github-con.herokuapp.com/

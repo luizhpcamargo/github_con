@@ -9,7 +9,7 @@ gem 'rails', '~> 5.1.4'
 gem 'rails-controller-testing'
 gem 'haml-rails', '~> 1.0'
 gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 5.6', '>= 5.6.8'
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'

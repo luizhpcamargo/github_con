@@ -11,7 +11,7 @@ gem 'haml-rails', '~> 1.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 5.0.0.0'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 5.0'

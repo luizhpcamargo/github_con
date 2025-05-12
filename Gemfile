@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 7.0.0'
 gem 'rails-controller-testing'
 gem 'haml-rails', '~> 1.0'
 gem 'pg', '~> 0.18'
@@ -14,7 +14,7 @@ gem 'puma', '~> 3.7'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 
